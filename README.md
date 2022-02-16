@@ -1,3 +1,3 @@
 # ArtBookNavigation
 
-This project was made for the homework given to remake the Artbook project, which was done before in the android course, with navigation.
+This project is a new version of Art Book project, made using navigation. Made for homework in Android course.
