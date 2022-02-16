@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/art_navigation"
+    app:startDestination="@id/arts">
+
+    <fragment
+        android:id="@+id/arts"
+        android:name="com.taha.artbooknavigation.view.Arts"
+        android:label="fragment_arts"
+        tools:layout="@layout/fragment_arts" >
+        <action
+            android:id="@+id/action_arts_to_artUpload"
+            app:destination="@id/artUpload" />
+    </fragment>
+    <fragment
+        android:id="@+id/artUpload"
+        android:name="com.taha.artbooknavigation.view.ArtUpload"
+        android:label="fragment_art_upload"
+        tools:layout="@layout/fragment_art_upload">
+        <action
+            android:id="@+id/action_artUpload_to_arts"
+            app:destination="@id/arts" />
+        <argument
+            android:name="id"
+            android:defaultValue="0"
+            app:argType="integer" />
+        <argument
+            android:name="info"
+            app:argType="string" />
+    </fragment>
+</navigation>
